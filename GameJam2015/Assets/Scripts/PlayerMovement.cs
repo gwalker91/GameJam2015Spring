@@ -1,43 +1,59 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerMovement : MonoBehaviour {
-	public float rotationDamping = 20f;
-	public float runSpeed = 10f;
-	public int gravity = 20;
+public class playermovement : MonoBehaviour {
 
-	float moveSpeed;
-	CharacterController controller;
-	
-	void Start()
+	public Rigidbody rb;
+	public Rigidbody rb2;
+	void start()
 	{
-		controller = (CharacterController)GetComponent(typeof(CharacterController));
+		rb = GetComponent<Rigidbody> ();
+		rb2 = GetComponent < Rigidbody> ();
 	}
 
-	float UpdateMovement()
+
+
+
+	public Collider collision;
+	public float jumpforce;
+	public float speed;
+	public bool canjump=false;
+	public bool isgrounded;
+	public int jumpcount=0;
+	public float jumpheight;
+	// Update is called once per frame
+	void FixedUpdate () 
 	{
-		// Movement
-		float x = Input.GetAxis("Horizontal");
-		float z = Input.GetAxis("Vertical");
-		
-		Vector3 inputVec = new Vector3(x, 0, z);
-		inputVec *= runSpeed;
-		
-		controller.Move((inputVec + Vector3.up * -gravity + new Vector3(0, 0, 0)) * Time.deltaTime);
-		
-		// Rotation
-		if (inputVec != Vector3.zero)
-			transform.rotation = Quaternion.Slerp(transform.rotation, 
-			                                      Quaternion.LookRotation(inputVec), 
-			                                      Time.deltaTime * rotationDamping);
-		
-		return inputVec.magnitude;
-	}
-	void Update()
-	{
-		moveSpeed = UpdateMovement();  
-		if (Input.GetKeyDown (KeyCode.Space)) {
-			this.GetComponent<Rigidbody>().AddForce (new Vector3 (0, 10, 0));
+
+		float horizontal = Input.GetAxis ("Horizontal");
+		float vertical = Input.GetAxis ("Vertical");
+
+		//float jump= Input.GetAxis("Jump");
+		Vector3 jumper=new Vector3(0.0f,jumpforce,0.0f);
+
+		Vector3 movement = new Vector3 (horizontal, 0.0f, vertical);
+		rb.AddForce (movement * speed * Time.deltaTime);
+		//Input.GetButtonDown ("Jump");
+		//rb2.AddForce (jumper*jumpforce);
+
+
+		if (Input.GetButtonDown ("Jump")&&jumpcount==0) {
+			rb2.velocity=jumper;
+			//rb2.AddForce (jumper*jumpforce);
+			jumpcount=1;
 		}
+		if (rb2.velocity.y == 0) 
+		{
+			jumpcount=0;
+		}
+
+
+	}
+	void OnCollisionEnter(Collision coll)
+	{
+		/*if (coll.gameObject.tag == "ground") 
+		{
+			jumpcount=0;
+		}*/
 	}
 }
