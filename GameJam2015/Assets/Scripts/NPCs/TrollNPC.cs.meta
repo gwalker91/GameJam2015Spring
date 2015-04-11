@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:GameJam2015/Assets/Scripts/NPCs/TrollNPC.cs.meta
 guid: 973790be92cb2b045b39412a0b66daa7
 timeCreated: 1428791070
+=======
+guid: 9144f49e8dd3b6c4885e03d47727115e
+timeCreated: 1428793012
+>>>>>>> b55de2bb2105fdc82a963937c28a90dfae37a3d8:GameJam2015/Assets/Scripts/NPCs/TrollNPC.cs.meta
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
