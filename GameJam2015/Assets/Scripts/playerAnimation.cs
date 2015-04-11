@@ -11,14 +11,12 @@ public class playerAnimation : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		anim.SetBool ("w_pressed", Input.GetKey (KeyCode.W));
-		anim.SetBool ("s_pressed", Input.GetKey (KeyCode.S));
 		anim.SetBool ("d_pressed", Input.GetKey (KeyCode.D));
 		anim.SetBool ("a_pressed", Input.GetKey (KeyCode.A));
 		anim.SetBool ("ctrl_pressed", Input.GetKey (KeyCode.LeftControl));
-		anim.SetBool ("space_pressed", Input.GetButton("Jump"));
-
+		anim.SetBool ("space_pressed", Input.GetKey(KeyCode.Space));
 	}
 
 }

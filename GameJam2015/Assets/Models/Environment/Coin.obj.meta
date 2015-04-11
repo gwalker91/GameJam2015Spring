@@ -1,27 +1,17 @@
 fileFormatVersion: 2
-guid: 85d5fca97c9a0e445a3855a714625cce
-timeCreated: 1428793294
+guid: e9022c345ee87444681b4ca556e7cf7b
+timeCreated: 1428794101
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
-    100000: contener
-    100002: cover
-    100004: handle
-    100006: //RootNode
-    400000: contener
-    400002: cover
-    400004: handle
-    400006: //RootNode
-    2300000: contener
-    2300002: cover
-    2300004: handle
-    3300000: contener
-    3300002: cover
-    3300004: handle
-    4300000: contener
-    4300002: cover
-    4300004: handle
+    100000: //RootNode
+    100002: Cylinder001
+    400000: //RootNode
+    400002: Cylinder001
+    2300000: Cylinder001
+    3300000: Cylinder001
+    4300000: Cylinder001
   materials:
     importMaterials: 1
     materialName: 0
