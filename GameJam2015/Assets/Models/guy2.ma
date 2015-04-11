@@ -1,6 +1,6 @@
 //Maya ASCII 2015 scene
 //Name: guy2.ma
-//Last modified: Fri, Apr 10, 2015 08:57:35 PM
+//Last modified: Fri, Apr 10, 2015 10:22:48 PM
 //Codeset: 1252
 requires maya "2015";
 requires -nodeType "HIKSolverNode" -nodeType "HIKCharacterNode" -nodeType "HIKControlSetNode"
@@ -18,12 +18,12 @@ fileInfo "osv" "Microsoft Windows 8 Business Edition, 64-bit  (Build 9200)\n";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 413.76707683098584 289.65358733307039 116.40472526684059 ;
-	setAttr ".r" -type "double3" -24.938352729601473 73.800000000004161 0 ;
+	setAttr ".t" -type "double3" 200.04954937468648 195.52990733758301 195.80762309168824 ;
+	setAttr ".r" -type "double3" -20.138352729601571 44.600000000004236 1.1167269439691139e-015 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 463.26650424229319;
+	setAttr ".coi" 270.51383365423283;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
