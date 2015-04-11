@@ -36,7 +36,28 @@ public class Player : MonoBehaviour {
 			for (int i = 0; i < answers.Length; i++) {
 				Text[] buttonTexts = buttons[i].GetComponentsInChildren<Text>();
 				buttonTexts[0].text = answers [i];
+				int j = (i==0) ? 1 : 0;
+				addListener(buttons[i],buttons[j],answers[i]);
 			}
+	}
+
+	//Trash method to handle onClickListeners for buttons based on the line/answers generated.
+	//This involves manually checking strings and determining the NPC actions for each.
+	void addListener(Button b, Button b2, string answer) {
+		b.onClick.AddListener (() => handleButtonClick (b, b2, answer));
+	}
+
+	void handleButtonClick(Button b, Button b2, string answer) {
+		b.gameObject.SetActive (false);
+		b2.gameObject.SetActive (false);
+		switch(answer) {
+		case "buffalo": dialogCanvas.GetComponent<Text>().text = "yes bufaloo"; break;
+		case "2": NPC.killPlayer(); break;
+		case "cory baxter": dialogCanvas.GetComponent<Text>().text = "u a busta"; break;
+		case "Yes": dialogCanvas.GetComponent<Text>().text = "ok"; break;
+		case "9": dialogCanvas.GetComponent<Text>().text = "There is a man on the roof..."; break;
+		case "72": dialogCanvas.GetComponent<Text>().text = "no shit sherlock"; break;
+		}
 	}
 
 	void OnTriggerEnter(Collider coll) {

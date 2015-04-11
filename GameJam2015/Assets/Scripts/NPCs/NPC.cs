@@ -13,6 +13,9 @@ public class NPC : MonoBehaviour {
 	public string getLine() { return this.dict.Keys.ElementAt(r.Next (0,dict.Keys.Count-1)); }
 	public string[] getAnswers(string line) { return this.dict[line]; }
 
-	//Additional NPC behaviors...
+	public static void killPlayer() {
+		// EDIT! Temporary filler, meant to restart to beginning of level as well as any necessary premable interactions.
+		Application.LoadLevel ("jhScene");
+	}
 }
 
