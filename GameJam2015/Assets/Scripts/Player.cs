@@ -1,13 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
 	private bool isIdle;
-	private System.Random r;
+	private GameObject dialogCanvas;
 	// Use this for initialization
 	void Start () {
 		isIdle = true;
-		r = new System.Random ();
+		dialogCanvas = GameObject.Find ("Canvas");
+		dialogCanvas.SetActive (false);
 	}
 	
 	// Update is called once per frame
@@ -16,14 +18,22 @@ public class Player : MonoBehaviour {
 	}
 
 	public void converse(Collider coll) {
-		TrollNPC obj = coll.gameObject.GetComponent<TrollNPC> ();
-		string[] goodbyes = obj.getGoodbyes ();
-		//conversation...
-		Debug.Log (goodbyes [r.Next (0,goodbyes.Length)]); //placeholder goodbye
+		NPC obj = coll.gameObject.GetComponent<NPC> ();
+		string line = obj.getLine();
 
-		GameObject dialogObj = new GameObject ();
-		Dialog dialog = dialogObj.AddComponent<Dialog> ();
-		dialog.open (new string[]{"LOL"},new string[]{"nope"});
+		//conversation...
+		dialogCanvas.SetActive (true);
+		Text t = dialogCanvas.GetComponent<Text> ();
+		t.text = line;
+
+		//We assume only 2 answers.
+		//Additionally, this should be delegated to a method and called if instanceof (NPC with buttons).
+		Button[] buttons = dialogCanvas.GetComponentsInChildren<Button> ();
+		string[] answers = obj.getAnswers (line);
+		for (int i = 0; i < answers.Length; i++) {
+			Text[] buttonTexts = buttons[i].GetComponentsInChildren<Text>();
+			buttonTexts[0].text = answers [i];
+		}
 	}
 
 	void OnTriggerEnter(Collider coll) {
@@ -36,5 +46,6 @@ public class Player : MonoBehaviour {
 	
 	void OnTriggerExit(Collider coll) {
 		isIdle = true;
+		dialogCanvas.SetActive (false);
 	}
 }
