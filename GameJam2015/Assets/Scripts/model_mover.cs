@@ -21,11 +21,18 @@ public class model_mover : MonoBehaviour {
 	{
 		float horizontal = Input.GetAxis ("Horizontal");
 		float vertical = Input.GetAxis ("Vertical");
-		
+
 		Vector3 jumper = new Vector3 (0.0f, jumpforce, 0.0f);
-		
 		Vector3 movement = new Vector3 (horizontal, 0.0f, vertical);
-		rb.AddForce (movement * speed * Time.deltaTime);
+
+		if (vertical == 0) 
+		{
+			Vector3 zero = new Vector3(0,0,0);
+			movement = zero;
+		}
+
+		rb.AddForce (movement*speed);
+
 		
 		if (Input.GetButtonDown ("Jump") && jumpcount == 0) 
 		{
