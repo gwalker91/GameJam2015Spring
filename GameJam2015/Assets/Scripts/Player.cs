@@ -27,13 +27,16 @@ public class Player : MonoBehaviour {
 		t.text = line;
 
 		//We assume only 2 answers.
-		//Additionally, this should be delegated to a method and called if instanceof (NPC with buttons).
 		Button[] buttons = dialogCanvas.GetComponentsInChildren<Button> ();
 		string[] answers = obj.getAnswers (line);
-		for (int i = 0; i < answers.Length; i++) {
-			Text[] buttonTexts = buttons[i].GetComponentsInChildren<Text>();
-			buttonTexts[0].text = answers [i];
-		}
+		if (answers.Length == 0) {
+			buttons[0].gameObject.SetActive(false);
+			buttons[1].gameObject.SetActive(false);
+		} else
+			for (int i = 0; i < answers.Length; i++) {
+				Text[] buttonTexts = buttons[i].GetComponentsInChildren<Text>();
+				buttonTexts[0].text = answers [i];
+			}
 	}
 
 	void OnTriggerEnter(Collider coll) {

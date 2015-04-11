@@ -13,9 +13,6 @@ public class NPC : MonoBehaviour {
 	public string getLine() { return this.dict.Keys.ElementAt(r.Next (0,dict.Keys.Count-1)); }
 	public string[] getAnswers(string line) { return this.dict[line]; }
 
-	// Use this for initialization
-	void Start () {
-
-	}
+	//Additional NPC behaviors...
 }
 
