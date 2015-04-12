@@ -920,6 +920,7 @@ GameObject:
   - 114: {fileID: 11484652}
   - 114: {fileID: 11400186}
   - 114: {fileID: 11401982}
+  - 114: {fileID: 11421526}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -5241,6 +5242,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b0ed3ab349601a4191dea67efa43659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11421526
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 140134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2adc5550d1d275a4483c7fbd716741e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11484652
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5254,6 +5266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 5436532}
   rb2: {fileID: 5436532}
+  cam: {fileID: 0}
   collision: {fileID: 0}
   jumpforce: 5
   speed: 400
