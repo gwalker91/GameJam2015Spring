@@ -3,11 +3,10 @@ using System.Collections;
 
 public class view : MonoBehaviour {
 
-	public Canvas canvas;
+	public GameObject menu;
 
 	void Start () {
-		canvas = gameObject.GetComponent ("Canvas") as Canvas;
-		gameObject.SetActive(false);
+		menu.SetActive(false);
 	}
 
 }
