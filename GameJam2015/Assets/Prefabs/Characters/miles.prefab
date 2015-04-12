@@ -1138,9 +1138,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 456148}
   - 95: {fileID: 9549150}
+  - 135: {fileID: 13509784}
   m_Layer: 0
   m_Name: miles
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3229,7 +3230,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 140502}
-  m_LocalRotation: {x: -.0967911705, y: .589212179, z: .700450897, w: -.390933454}
+  m_LocalRotation: {x: -.0967911631, y: .589212179, z: .700450897, w: -.390933424}
   m_LocalPosition: {x: .0320546515, y: 2.65785786e-07, z: 1.280167e-06}
   m_LocalScale: {x: .999999881, y: .999999881, z: .999999881}
   m_Children: []
@@ -5120,6 +5121,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!135 &13509784
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 139948}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: .75
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!137 &13704522
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
