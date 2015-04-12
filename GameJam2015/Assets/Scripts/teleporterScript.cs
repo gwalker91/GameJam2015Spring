@@ -4,7 +4,6 @@ using System.Collections;
 public class teleporterScript : MonoBehaviour {
 
 	public Collider teleporter;
-	public Transform player;
 	GameObject[] locations;
 
 	void Start() {
@@ -12,8 +11,9 @@ public class teleporterScript : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider teleporter){
-		Vector3 position = player.position;
-		Vector3 new_position = locations [Random.Range (0, locations.Length)].transform.position;
-		transform.position = new_position;
+		if (teleporter.tag == "Teleporter") {
+			Vector3 new_position = locations [Random.Range (0, locations.Length)].transform.position;
+			transform.position = new_position;
+		}
 	}
 }
