@@ -25,6 +25,7 @@ GameObject:
   - 4: {fileID: 428856}
   - 33: {fileID: 3346214}
   - 23: {fileID: 2378866}
+  - 64: {fileID: 6483230}
   m_Layer: 0
   m_Name: JailDoorOpen
   m_TagString: Untagged
@@ -51,7 +52,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 113722}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.52999997, y: .0379999988, z: -1.28600001}
+  m_LocalPosition: {x: .882285357, y: -17.4318848, z: -8.68963432}
   m_LocalScale: {x: .0212560147, y: .0243041683, z: .0226828456}
   m_Children:
   - {fileID: 428856}
@@ -67,7 +68,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 999b49d2ef47ee940a9c9218432c31a6, type: 2}
+  - {fileID: 2100000, guid: 59f7efcd918544346b97f19445108442, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -87,6 +88,18 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 197744}
+  m_Mesh: {fileID: 4300000, guid: 2210b9ce99916c445a8a4673dd8e54fd, type: 3}
+--- !u!64 &6483230
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 197744}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 2210b9ce99916c445a8a4673dd8e54fd, type: 3}
 --- !u!1001 &100100000
 Prefab:
