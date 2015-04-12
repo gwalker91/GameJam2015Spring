@@ -9,6 +9,7 @@ TagManager:
   - Location
   - Antigrav
   - Teleporter
+  - Star
   layers:
   - Default
   - TransparentFX

@@ -20334,7 +20334,7 @@ GameObject:
   - 114: {fileID: 1537548429}
   - 54: {fileID: 1537548434}
   m_Layer: 0
-  m_Name: Next Level
+  m_Name: Collision to Next Level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
