@@ -15,7 +15,7 @@ public class StarCollection : MonoBehaviour {
 	{
 		stars = GameObject.FindGameObjectsWithTag ("Star");
 		totalStars = stars.Length;
-		ui = GameObject.Find ("Canvas");
+		ui = GameObject.Find ("UI");
 		ui.transform.Find("Count").GetComponent<Text>().text = "Stars: " + starsCollected + "/" 
 			+ totalStars;
 	}
