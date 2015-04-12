@@ -17,7 +17,7 @@ public class AudioManager : MonoBehaviour
 	{
 		audioPlayer = GetComponent<AudioSource> ();
 		timer = 0.0f;
-
+		coroutine = null;
 	}
 
 	void FixedUpdate() 
@@ -29,10 +29,13 @@ public class AudioManager : MonoBehaviour
 	public void Changeclip(string name, bool playRightAway = false)
 	{
 		if (playRightAway) {
-			StopCoroutine (coroutine);
+			if(coroutine != null)
+				StopCoroutine (coroutine);
 			audioPlayer.Stop ();
 			FindFile (name);
-		} else 
+			coroutine = null;
+		} 
+		else 
 		{
 			coroutine = Wait (name);
 			StartCoroutine (coroutine);	
@@ -47,6 +50,7 @@ public class AudioManager : MonoBehaviour
 			audioPlayer.Stop();
 		}
 		FindFile (name);
+		coroutine = null;
 	}
 
 	void FindFile(string name)

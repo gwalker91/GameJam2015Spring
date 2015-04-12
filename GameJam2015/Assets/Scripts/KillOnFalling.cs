@@ -1,13 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 public class KillOnFalling : MonoBehaviour 
 {
 	Vector3 playerInitPos;
-
 	// Use this for initialization
 	void Start () 
 	{
+		Random.seed =(int)System.DateTime.Now.Ticks;
 		playerInitPos = transform.position;
 	}
 	
@@ -17,7 +18,17 @@ public class KillOnFalling : MonoBehaviour
 		if (transform.position.y < -10.0f) 
 		{
 			reset ();
-			GameObject.Find("AudioManager").GetComponent<AudioManager>().Changeclip("Respawn", true);
+			int r = (int)Random.Range(0,2);
+			switch (r)
+			{
+			case 0:
+				GameObject.Find("AudioManager").GetComponent<AudioManager>().Changeclip("Respawn", true);
+				break;
+			case 1:
+				GameObject.Find("AudioManager").GetComponent<AudioManager>().Changeclip("NarratorStory", true);
+				break;
+			}
+
 		}
 	}
 
