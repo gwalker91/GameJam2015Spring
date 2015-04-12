@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/menu test.unity
+    path: Assets/Scenes/trash title.unity
   - enabled: 1
-    path: Assets/Scenes/other scene.unity
+    path: Assets/Scenes/Zach C2.unity
