@@ -14,7 +14,7 @@ public class destroyAfterTime2 : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		if(counter > 100)
+		if(counter > 20)
 		{
 			Destroy (gameObject);
 		}
