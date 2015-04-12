@@ -16,7 +16,13 @@ public class KillOnFalling : MonoBehaviour
 	{
 		if (transform.position.y < -10.0f) 
 		{
-			transform.position = playerInitPos;
+			reset ();
+			GameObject.Find("AudioManager").GetComponent<AudioManager>().Changeclip("Respawn", true);
 		}
+	}
+
+	public void reset()
+	{
+		gameObject.transform.position = playerInitPos;
 	}
 }

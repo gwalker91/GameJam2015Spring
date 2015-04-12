@@ -5,8 +5,8 @@ public class StairNPC : NPC {
 
 	// Use this for initialization
 	void Start () {
-		this.dict.Add ("At the top of these stairs rests a sack of dubloons.", new string[] {});
-		this.dict.Add ("The only way out lies at the top of these stairs...", new string[] {});
-		this.dict.Add ("A sheltered hermit lives up these stairs who may be able to help you escape...", new string[] {});
+		this.dict.Add ("All the gold coins behind me would last a man a lifetime...", new string[] {});
+		this.dict.Add ("It seems the only way to cross is through these stairs...", new string[] {});
+		this.dict.Add ("The riches that lie past me are unbounded...", new string[] {});
 	}
 }
