@@ -5244,9 +5244,10 @@ MonoBehaviour:
   rb2: {fileID: 5436532}
   collision: {fileID: 0}
   jumpforce: 5
-  speed: 10
+  speed: 400
   canjump: 0
   jumpcount: 0
+  stopper: 0
   jumpheight: 5
 --- !u!124 &12407398
 Behaviour:

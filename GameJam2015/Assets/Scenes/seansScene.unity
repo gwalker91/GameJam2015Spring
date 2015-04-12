@@ -906,6 +906,10 @@ Prefab:
       propertyPath: collision
       value: 
       objectReference: {fileID: 1853727817}
+    - target: {fileID: 11484652, guid: ba8847e7be15f1f4c9c61cb1d50f5941, type: 2}
+      propertyPath: speed
+      value: 400
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ba8847e7be15f1f4c9c61cb1d50f5941, type: 2}
   m_IsPrefabParent: 0
