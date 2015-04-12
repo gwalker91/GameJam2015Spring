@@ -10,6 +10,7 @@ public class PlayNarrator : MonoBehaviour
 
 	void Start()
 	{
+		audiomanager = GameObject.Find ("AudioManager");
 		hasPlayed = false;
 		playRightAway = false;
 	}
