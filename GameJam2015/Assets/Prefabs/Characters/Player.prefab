@@ -914,14 +914,15 @@ GameObject:
   m_Component:
   - 4: {fileID: 473308}
   - 95: {fileID: 9560108}
-  - 54: {fileID: 5482936}
-  - 136: {fileID: 13609460}
-  - 65: {fileID: 6552526}
-  - 114: {fileID: 11475634}
-  - 114: {fileID: 11496632}
+  - 54: {fileID: 5436532}
+  - 135: {fileID: 13513068}
+  - 136: {fileID: 13650390}
+  - 114: {fileID: 11484652}
+  - 114: {fileID: 11400186}
+  - 114: {fileID: 11401982}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4434,7 +4435,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 140134}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.19000006, y: .449999988, z: -9.89999962}
+  m_LocalPosition: {x: 1.30999994, y: .449000001, z: -4.38600016}
   m_LocalScale: {x: .854847074, y: .854846835, z: .854846835}
   m_Children:
   - {fileID: 439384}
@@ -5172,7 +5173,7 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
---- !u!54 &5482936
+--- !u!54 &5436532
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -5185,20 +5186,8 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
---- !u!65 &6552526
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 140134}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: .670000017, y: 1.77999997, z: .319999993}
-  m_Center: {x: 0, y: .899999976, z: .0299999993}
 --- !u!81 &8137358
 AudioListener:
   m_ObjectHideFlags: 1
@@ -5222,7 +5211,7 @@ Animator:
   m_GameObject: {fileID: 140134}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 1eeeca45f0dc13f4db77d067fedad79a, type: 3}
-  m_Controller: {fileID: 9100000, guid: e2cf68ff4b1ffda45a77f7307dd789b9, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4c4b817f2147391468ea7a49154e6553, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -5230,7 +5219,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11475634
+--- !u!114 &11400186
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -5238,10 +5227,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 140134}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 521b611700410be45810047f0a74e899, type: 3}
+  m_Script: {fileID: 11500000, guid: 7027460d32ed8754eaba1b72576dd741, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11496632
+--- !u!114 &11401982
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -5249,17 +5238,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 140134}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce7a80d520cacc042b5fe14f373d8173, type: 3}
+  m_Script: {fileID: 11500000, guid: 0b0ed3ab349601a4191dea67efa43659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MovingTurnSpeed: 360
-  m_StationaryTurnSpeed: 180
-  m_JumpPower: 12
-  m_GravityMultiplier: 2
-  m_RunCycleLegOffset: .200000003
-  m_MoveSpeedMultiplier: 1
-  m_AnimSpeedMultiplier: 1
-  m_GroundCheckDistance: .100000001
+--- !u!114 &11484652
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 140134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 115f8f71a4f42d34a820c425170cf4ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 5436532}
+  rb2: {fileID: 5436532}
+  collision: {fileID: 0}
+  jumpforce: 5
+  speed: 400
+  canjump: 0
+  jumpcount: 0
+  stopper: 0
+  jumpheight: 5
 --- !u!124 &12407398
 Behaviour:
   m_ObjectHideFlags: 1
@@ -5267,19 +5268,31 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100618}
   m_Enabled: 1
---- !u!136 &13609460
+--- !u!135 &13513068
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 140134}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: .300000012
+  m_Center: {x: 0, y: .289999992, z: 0}
+--- !u!136 &13650390
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 140134}
-  m_Material: {fileID: 13400000, guid: cf63880488ec29f43a759ecd9c6c5123, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
-  m_Radius: .300000012
-  m_Height: 1.60000002
+  m_Enabled: 1
+  m_Radius: .5
+  m_Height: 1
   m_Direction: 1
-  m_Center: {x: 0, y: .800000012, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!137 &13728002
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

@@ -48,13 +48,14 @@ public class Player : MonoBehaviour {
 	void handleButtonClick(Button b, Button b2, string answer) {
 		b.gameObject.SetActive (false);
 		b2.gameObject.SetActive (false);
+		Debug.Log (answer);
 		switch(answer) {
-		case "buffalo": dialogCanvas.GetComponent<Text>().text = "yes bufaloo"; break;
-		case "2": NPC.killPlayer(); break;
-		case "cory baxter": dialogCanvas.GetComponent<Text>().text = "u a busta"; break;
-		case "Yes": dialogCanvas.GetComponent<Text>().text = "ok"; break;
-		case "9": dialogCanvas.GetComponent<Text>().text = "There is a man on the roof..."; break;
-		case "72": dialogCanvas.GetComponent<Text>().text = "no shit sherlock"; break;
+			case "buffalo": dialogCanvas.GetComponent<Text>().text = "yes bufaloo"; break;
+			case "2": NPC.killPlayer(); break;
+			case "cory baxter": dialogCanvas.GetComponent<Text>().text = "u a busta"; break;
+			case "Yes": dialogCanvas.GetComponent<Text>().text = "ok"; break;
+			case "9": dialogCanvas.GetComponent<Text>().text = "There is a man on the roof..."; break;
+			case "72": dialogCanvas.GetComponent<Text>().text = "no shit sherlock"; break;
 		}
 	}
 	
