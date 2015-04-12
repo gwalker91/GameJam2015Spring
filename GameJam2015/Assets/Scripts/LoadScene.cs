@@ -3,11 +3,8 @@ using System.Collections;
 
 public class LoadScene : MonoBehaviour {
 
-	public void Testing() {
-		Application.LoadLevel ("other scene");
+	public void LoadLevel() {
+		Application.LoadLevel ("Zach C2");
 	}
 
-	public void Menu() {
-		Application.LoadLevel ("menu test");
-	}
 }

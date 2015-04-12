@@ -1302,9 +1302,11 @@ GameObject:
   m_Component:
   - 4: {fileID: 469254}
   - 95: {fileID: 9599750}
+  - 114: {fileID: 11466298}
+  - 135: {fileID: 13563316}
   m_Layer: 0
   m_Name: luther
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4331,8 +4333,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 149200}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.986000001, y: .0260000005, z: -2.96600008}
+  m_LocalRotation: {x: 0, y: .998585284, z: 0, w: .0531740561}
+  m_LocalPosition: {x: 2.30200005, y: .0260000005, z: 1.15799999}
   m_LocalScale: {x: .866194546, y: .866194546, z: .866194546}
   m_Children:
   - {fileID: 420536}
@@ -5112,7 +5114,7 @@ Animator:
   m_GameObject: {fileID: 149200}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: eb9eea4a402d1fe42a0cae14bb43b7a0, type: 3}
-  m_Controller: {fileID: 9100000, guid: 359eb53e5ba92d74891476b4b0b229df, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9e2d58d5896b5ba4f8d039c844ebd849, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -5120,6 +5122,29 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11466298
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 149200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca7ecc9fcfd501842bf65af9a84dc265, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &13563316
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 149200}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: .75
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!137 &13703866
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
