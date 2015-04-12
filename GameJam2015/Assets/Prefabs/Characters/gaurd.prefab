@@ -5137,6 +5137,7 @@ MonoBehaviour:
   cannonBall: {fileID: 154788, guid: ce588bdb42b26bb43a8f7be5214c5774, type: 2}
   counter: 0
   tempVector: {x: 0, y: 0, z: 0}
+  tempQuat: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &11470526
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5155,7 +5156,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 170878}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: .5
