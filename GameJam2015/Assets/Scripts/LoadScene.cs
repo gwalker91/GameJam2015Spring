@@ -7,4 +7,8 @@ public class LoadScene : MonoBehaviour {
 		Application.LoadLevel ("Zach C2");
 	}
 
+	public void ExitToMenu() {
+		Application.LoadLevel ("trash title");
+	}
+
 }
