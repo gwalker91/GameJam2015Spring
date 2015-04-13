@@ -77,8 +77,9 @@ public class Player : MonoBehaviour {
 			GameObject clonedDoor = Instantiate (jailDoorClosed,new Vector3(-11f,.5f,40f),Quaternion.identity) as GameObject;
 			clonedDoor.transform.Rotate(0,90,0);
 
-			for(int i = 0; i < 5; i++)
-				Instantiate(key,new Vector3(-10f,1.5f,40f),Quaternion.identity);
+			for(int i = 0; i < 10; i++) {
+				Instantiate(key,new Vector3(-10f,1.5f,40f+Random.Range (-.85f,.85f)),Quaternion.identity);
+			}
 		}
 	}
 }
