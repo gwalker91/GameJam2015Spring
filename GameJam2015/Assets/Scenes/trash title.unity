@@ -1312,7 +1312,7 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 175, y: 88.8000031}
+  m_AnchoredPosition: {x: 175, y: 70.3000031}
   m_SizeDelta: {x: 500, y: 70}
   m_Pivot: {x: .5, y: .5}
 --- !u!1 &827351442
@@ -1842,8 +1842,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 165.799988, y: 116.400002}
-  m_SizeDelta: {x: 400, y: 100}
+  m_AnchoredPosition: {x: 182.399994, y: 105.599998}
+  m_SizeDelta: {x: 550, y: 150}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1203934789
 MonoBehaviour:
@@ -1870,7 +1870,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Person1\t\tPerson2\t\tPerson3\nPerson4\t\tPerson5\t\tPerson6"
+  m_Text: "SEAN CREVELING\t\tSai Smaran Macha\nNatalie Nygaard\t\t\tJames Hardjadinata\nGrant
+    Walker\t\t\t\tZach Anderson"
 --- !u!222 &1203934790
 CanvasRenderer:
   m_ObjectHideFlags: 0
