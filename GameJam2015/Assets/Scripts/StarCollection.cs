@@ -29,12 +29,15 @@ public class StarCollection : MonoBehaviour {
 
 	public void ResetStars()
 	{
-		foreach(GameObject g in stars)
+		if (starsCollected > 0) 
 		{
-			g.SetActive(true);
-			starsCollected = 0;
-			ui.transform.Find("Count").GetComponent<Text>().text = "Stars: " + starsCollected + "/" 
-				+ totalStars;
+			foreach (GameObject g in stars) {
+				g.SetActive (true);
+				starsCollected = 0;
+				ui.transform.Find ("Count").GetComponent<Text> ().text = "Stars: " + starsCollected + "/" 
+					+ totalStars;
+				GameObject.FindGameObjectWithTag ("Player").GetComponent<KillOnFalling> ().reset ();
+			}
 		}
 	}
 }
