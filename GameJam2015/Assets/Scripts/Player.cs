@@ -5,6 +5,8 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour {
 	private bool isIdle;
 	private GameObject dialogCanvas, leftButton, rightButton;
+	public GameObject jailDoorClosed, key;
+
 	// Use this for initialization
 	void Start () {
 		isIdle = true;
@@ -48,7 +50,6 @@ public class Player : MonoBehaviour {
 	void handleButtonClick(Button b, Button b2, string answer) {
 		b.gameObject.SetActive (false);
 		b2.gameObject.SetActive (false);
-		Debug.Log (answer);
 		switch(answer) {
 			case "buffalo": dialogCanvas.GetComponent<Text>().text = "yes bufaloo"; break;
 			case "2": NPC.killPlayer(); break;
@@ -60,15 +61,25 @@ public class Player : MonoBehaviour {
 	}
 	
 	void OnTriggerEnter(Collider coll) {
-		if(coll.tag == "NPC")
-		if (isIdle) {
-			isIdle = false;
-			converse (coll);
+		if (coll.tag == "NPC") {
+			if (isIdle) {
+				isIdle = false;
+				converse (coll);
+			} 
 		}
 	}
 	
 	void OnTriggerExit(Collider coll) {
 		isIdle = true;
 		dialogCanvas.SetActive (false);
+		if (coll.tag == "ShiftyJailDoor") {
+			Destroy (GameObject.Find ("JailDoorOpen"));
+			GameObject clonedDoor = Instantiate (jailDoorClosed,new Vector3(-11f,.5f,40f),Quaternion.identity) as GameObject;
+			clonedDoor.transform.Rotate(0,90,0);
+
+			for(int i = 0; i < 10; i++) {
+				Instantiate(key,new Vector3(-10f,1.5f,40f+Random.Range (-.85f,.85f)),Quaternion.identity);
+			}
+		}
 	}
 }

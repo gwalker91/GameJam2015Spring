@@ -7,4 +7,9 @@ public class LoadScene : MonoBehaviour {
 		Application.LoadLevel ("Zach C2");
 	}
 
+	public void ExitToMenu() {
+		Time.timeScale = GameObject.Find ("EventSystem").GetComponent<detectPause> ().getTime();
+		Application.LoadLevel ("trash title");
+	}
+
 }

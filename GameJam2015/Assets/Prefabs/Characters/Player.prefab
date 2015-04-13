@@ -5323,6 +5323,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b0ed3ab349601a4191dea67efa43659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jailDoorClosed: {fileID: 100002, guid: b33f4754ce925f44ab3523f724889e33, type: 3}
+  key: {fileID: 192250, guid: 0b67291b56465cd418cd8d65b4af67f2, type: 2}
 --- !u!114 &11403396
 MonoBehaviour:
   m_ObjectHideFlags: 1

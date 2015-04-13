@@ -1,0 +1,155 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &134618
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 461306}
+  - 114: {fileID: 11482468}
+  - 82: {fileID: 8291316}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &461306
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 134618}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.47720051, y: .655495167, z: .898239136}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!82 &8291316
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 134618}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!114 &11482468
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 134618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be1e64b790745c343a684b7bdd3d8b38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioFiles:
+  - name: ConviceMe
+    clip: {fileID: 8300000, guid: df9cd239e479d2b4fa8ae4d4cc0241cc, type: 3}
+  - name: DidntListen
+    clip: {fileID: 8300000, guid: 9bdd49c4f4390214683c47eb58039c08, type: 3}
+  - name: Follow
+    clip: {fileID: 8300000, guid: af5d38e789a3aff4f8b41eeaefb4297f, type: 3}
+  - name: Insane
+    clip: {fileID: 8300000, guid: c58ec9cabf2c85249822e3b34569c442, type: 3}
+  - name: IToldYou
+    clip: {fileID: 8300000, guid: f0830b6aa1885034193d40f8b6f015cb, type: 3}
+  - name: IToldYouSo
+    clip: {fileID: 8300000, guid: e37f63bd8a6b90e46a2811b2e1d73ceb, type: 3}
+  - name: LookingFor
+    clip: {fileID: 8300000, guid: 6ed00670d58b3a14fb688ec4ffb0862d, type: 3}
+  - name: NarratorStory
+    clip: {fileID: 8300000, guid: b69b5a4c1f5628941b1455ed06a9313b, type: 3}
+  - name: NeverToldYou
+    clip: {fileID: 8300000, guid: b6948151a05618b4f93b71fbb993e286, type: 3}
+  - name: OtherWay
+    clip: {fileID: 8300000, guid: 4b4bff21bbd694143ad439b27b93e0fa, type: 3}
+  - name: Respawn
+    clip: {fileID: 8300000, guid: 5ddc3c325fd29984883b1ff1bd16d7b2, type: 3}
+  - name: Understanding
+    clip: {fileID: 8300000, guid: 49f74d44eff5d1a44928a7db8ff17e2a, type: 3}
+  - name: WhatsBehind
+    clip: {fileID: 8300000, guid: 384d6a17764d4064bba093b6bde2c250, type: 3}
+  - name: WhenYouDie
+    clip: {fileID: 8300000, guid: 69085b74776ef814e89a78b44290ee56, type: 3}
+  - name: Wondering
+    clip: {fileID: 8300000, guid: 73cc58ce954dd024b81008b407e0c199, type: 3}
+  - name: WouldntGoThatWay
+    clip: {fileID: 8300000, guid: bca05698236b2244ca7cacb80ab99065, type: 3}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 134618}
+  m_IsPrefabParent: 1
