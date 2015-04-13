@@ -17,7 +17,7 @@ public class collisionDetectAdvance : MonoBehaviour {
 	{
 		if (other.transform.root.CompareTag("Player"))
 		{
-			Application.LoadLevel("trash title");
+			Application.LoadLevel("level 2");
 		}
 	}
 
