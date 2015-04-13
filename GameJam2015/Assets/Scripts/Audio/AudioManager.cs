@@ -26,7 +26,7 @@ public class AudioManager : MonoBehaviour
 			timer += Time.deltaTime;
 	}
 
-	public void Changeclip(string name, bool playRightAway = false)
+	public void Changeclip(string name, bool playRightAway )
 	{
 		if (playRightAway) {
 			if(coroutine != null)
