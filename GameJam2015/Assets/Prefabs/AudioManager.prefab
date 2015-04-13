@@ -142,8 +142,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 73cc58ce954dd024b81008b407e0c199, type: 3}
   - name: WouldntGoThatWay
     clip: {fileID: 8300000, guid: bca05698236b2244ca7cacb80ab99065, type: 3}
-  - name: StarReset
-    clip: {fileID: 8300000, guid: 079c00e97612cc04da37b0099fbc23fe, type: 3}
+  - name: MetalStar
+    clip: {fileID: 8300000, guid: d5aed8b0ce0856549842b243b7fe93ea, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

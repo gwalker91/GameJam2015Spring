@@ -17,7 +17,7 @@ public class CheckPoint : MonoBehaviour {
 		if (col.tag == "Player") 
 		{
 			starCollection.GetComponent<StarCollection>().ResetStars();
-            GameObject.Find("AudioManager").GetComponent<AudioManager>().Changeclip("StarReset", true);
+            GameObject.Find("AudioManager").GetComponent<AudioManager>().Changeclip("MetalStar", true);
 		}
 
 	}
