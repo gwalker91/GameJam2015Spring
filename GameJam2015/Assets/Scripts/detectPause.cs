@@ -38,4 +38,9 @@ public class detectPause : MonoBehaviour
             pauseMenu.SetActive(false);
         }
     }
+
+	public float getTime()
+	{
+		return(time);
+	}
 }

@@ -8,6 +8,7 @@ public class LoadScene : MonoBehaviour {
 	}
 
 	public void ExitToMenu() {
+		Time.timeScale = GameObject.Find ("EventSystem").GetComponent<detectPause> ().getTime();
 		Application.LoadLevel ("trash title");
 	}
 
